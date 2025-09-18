@@ -1,0 +1,42 @@
+#include <iostream>
+
+using namespace std;
+
+int main(){
+	
+	//Universal Set
+	int universalSet = 200;
+	cout<<"Total students = 200"<<endl;
+	
+	//Sports Club
+	int sportsClub = 120;
+	cout<<"Students in Sports Club = 120"<<endl;
+	
+	//Music Club
+	int musicClub = 90;
+	cout<<"Students in Music Club = 90"<<endl;
+	
+	//Both Clubs(Sports Club ∩ Music Club)
+	int bothClubs = 50;
+	cout<<"Students in both Clubs = 50"<<endl;
+	
+	//Set Operations
+	
+	//Union(Sports Club ∩ Music Club)
+	int unionSet = sportsClub + musicClub - bothClubs;
+	cout<<"The total number of students who are members of at least one of the clubs (either Sports Club, Music Club, or both). = "<<unionSet<<endl;
+	
+	//Difference(Sports Club - (Sports Club ∩ Music Club))
+	int onlySports = sportsClub - bothClubs;
+	cout<<"The number of students who are only members of the Sports Club. = "<<onlySports<<endl;
+	
+	//Difference(Music Club - (Sports Club ∩ Music Club))
+	int onlyMusic = musicClub - bothClubs;
+	cout<<"The number of students who are only members of the Music Club. = "<<onlyMusic<<endl;
+	
+	//Complement((Sports Club ∪ Music Club)')
+	int none = universalSet - unionSet;
+	cout<<"The number of students who are members of neither of the two clubs. = "<<none<<endl;
+	
+	return 0;
+	}
