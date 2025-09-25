@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int factorial(int n) {
-    int fact = 1;
+long long factorial(int n) {
+    long long fact = 1;
     for (int i = 1; i <= n; i++) {
         fact *= i;
     }
@@ -10,7 +10,7 @@ int factorial(int n) {
 }
 
 //Combination(nCr)
-int combination(int n, int r) {
+long long combination(int n, int r) {
     return factorial(n) / (factorial(r) * factorial(n - r));
 }
 
@@ -18,10 +18,9 @@ int main() {
     int students = 20;
     int size = 3;
 
-    int total = combination(students, size);
+    long long total = combination(students, size);
 
     cout << "Number of different teams of 3 students: " << total << endl;
 
     return 0;
 }
-
